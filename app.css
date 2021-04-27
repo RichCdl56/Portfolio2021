@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #161616;
+}
+section .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e51e2a;
+  clip-path: circle(70% at right -20%);
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+header .navigation {
+  position: relative;
+  display: flex;
+}
+header .navigation li {
+  list-style: none;
+}
+header .navigation li a {
+  display: inline-block;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .textBox {
+  position: relative;
+  max-width: 600px;
+  margin-right: 20px;
+}
+.content .textBox h2 {
+  color: #fff;
+  font-size: 3em;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+  font-weight: 700;
+}
+.content .textBox p {
+  color: #fff;
+}
+.content .textBox a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background: #e51e2a;
+  color: #fff;
+  border-radius: 40px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.sci {
+  position: absolute;
+  bottom: 40px;
+  left: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sci li {
+  list-style: none;
+}
+.sci li a {
+  display: inline-block;
+  margin-left: 15px;
+  background: #222;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+}
+.sci li a:hover {
+  background: #e51e2a;
+  transform: translateY(-10px);
+}
+.sci li a img {
+  filter: invert(1);
+  transform: scale(0.5);
+}
+/********************slider**********/
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 180px;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+}
+
+.content .imgBox {
+  width: 500px;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 40px;
+}
+.content .imgBox img {
+  max-width: 1000px;
+}
+.swiper-slide .img {
+  position: absolute;
+  bottom: 0;
+  max-height: 100%;
+}
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+@media (max-width: 991px) {
+  header {
+    padding: 40px;
+  }
+  section {
+    padding: 150px 40px;
+  }
+  .sci {
+    left: 30px;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .content .textBox,
+  .content .imgBox {
+    max-width: 100%;
+  }
+  .swiper-slide {
+    height: 300px;
+  }
+  header .navigation {
+    display: none;
+  }
+  header .navigation.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://www.reliance-rh.com/wp-content/uploads/2020/11/giphy-1-1.gif);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  header .navigation li a {
+    margin: 10px 0;
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+  .toggle {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj70fyThIClmby-ia6eGqjeU09Km6YamTQiw&usqp=CAU);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 10000;
+  }
+  .toggle.active {
+    position: fixed;
+    right: 40px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAG1BMVEX///8AAACbm5ucnJzg4ODj4+OYmJjr6+tmZmYkEqRSAAADIElEQVR4nO2dC3rjIAwGi5ukvf+JW2+2u25iApiHpZ+ZA+hjIqwQB8TbGwAAAAAAAAAAAAAAAAAAAAAAAAA44sN5/CTXcOsa/xauXeMnuYQQlo7xl+/4l47xk6yCIbx3i//+J/6JinfBfllc/sY/TfEaQlfF5V/8k57F/4KhS7m5beKforgV7JHF5Vf8ExQvIXRVXB7iD38WHwVbV9RHweGKz4Jts/gsOFhxT7Cl4p7gUMXr7gDaVdRbJP6wchMTbKUYExymGBdsM1H3p+hAxf1nsJ3iK8Ehz+JrwXrF14IDFFOCtYopwe6Kr57BFoppwc7P4kfGAGoqaryKbun6YiPnMz6exb7RDQzChODPi4UUR5bh/SIX0uuTNpLBfkMxJJhb8coqao+YFeR93iXDyRMclMGV1lPK1BS9k1f3coeUJzigipYPKk/RYAbbDsuoYLvi0L5sNaNNgTf2NfGbFtPL7BRtNTzjgvWLZTOL7Th1OTCfwdpBuhCsqYWmq+iWo5lwksGVY0N1JHhsGW5ysR2nPB+uMrhSOmB3gqV10U0V3VIyaJeCJRPP4RS9k1sd274AGUqe4qdfwVxFx4LtFM0K5lbJFOaq6JYWWTScwZV6ReOCucvwOGYW23Hqsmg+gys1ii4Eayqq6Sq65WgWnWRw5ZiiI8Fjiq4Ejyg6EyxXdCdYWlHdVNEtJYouBUsmqsMpeid3jepgLRoj75XF59nDPI58DuWfQ/laKv99KL+mkV+Xyv+2kP99KP8bX/49jfy7Nvn3pfLvvOX/t5D/70n+/0P5/4Dl/8eX34shv59Gfk+U/L42+b2J8vtL5fcIy+/zlt+rL3/eQv7MjPy5J/mza7UV0fz5Q/kzpPLngOXPcsufx5fvqSDfF6PtoAwqyvenke8xJN8nSr7Xl3y/Nvmee/J9E+V7X07Qv1S+B+0EfYTTirW1LlVRT293LdDPe4Ke7BP01Z/gboQJ7reY4I6S/vfMPH9pnH6VjtxdQRPc9zTBnV0T3Ls2wd15E9x/OMEdlhPcQzrBXbIAAAAAAAAAAAAAAAAAAAAAAAAAUMIX4p4kcAR9+z8AAAAASUVORK5CYII=);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
